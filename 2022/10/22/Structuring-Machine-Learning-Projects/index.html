@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="Structuring Machine Learning ProjectsWeek 1 ML Strategy1. Introduction to ML Strategy
+Why ML Strategy
+
+Many ideas to try
+Choose the right direction
+
+
+">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="croirezoe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Structuring Machine Learning Projects"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Zoe&#39;s Blog"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Structuring Machine Learning Projects - Zoe&#39;s Blog</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/croirezoe/croirezoe.github.io/css/reset.css">
+
+    
+<link rel="stylesheet" href="/croirezoe/croirezoe.github.io/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!--Favicon-->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/croirezoe/croirezoe.github.io/">Zoe's Blog</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/croirezoe/croirezoe.github.io/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/croirezoe/croirezoe.github.io/archives">Archives</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+            
+                <li><a href="https://www.facebook.com/" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+                <li><a href="https://www.behance.net/" class="behance" target="_blank" data-title="Behance"></a></li>
+            
+            
+                <li><a href="https://plus.google.com/+Pixelhint/posts" class="google" target="_blank" data-title="Google+"></a></li>
+            
+            
+                <li><a href="https://dribbble.com/pixelhint" class="dribble" target="_blank" data-title="Dribble"></a></li>
+            
+            
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2014 magnetic.</p>
+            <p>Template by <a target="_blank" rel="noopener" href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div ><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/butterfly_PM.png');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a class="previous disabled"></a></li>
+        
+        <li><a href="/croirezoe/croirezoe.github.io/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/croirezoe/croirezoe.github.io/2022/10/22/hello-world/" class="next" data-title="Hello World"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">Structuring Machine Learning Projects</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <h1 id="Structuring-Machine-Learning-Projects"><a href="#Structuring-Machine-Learning-Projects" class="headerlink" title="Structuring Machine Learning Projects"></a>Structuring Machine Learning Projects</h1><h2 id="Week-1-ML-Strategy"><a href="#Week-1-ML-Strategy" class="headerlink" title="Week 1 ML Strategy"></a>Week 1 ML Strategy</h2><h3 id="1-Introduction-to-ML-Strategy"><a href="#1-Introduction-to-ML-Strategy" class="headerlink" title="1. Introduction to ML Strategy"></a>1. Introduction to ML Strategy</h3><ol>
+<li><p>Why ML Strategy</p>
+<ul>
+<li>Many ideas to try</li>
+<li>Choose the right direction</li>
+</ul>
+</li>
+<li><p>Orthogonalization</p>
+<ul>
+<li>Fit training set well on cost function ( big network, Adam, … )</li>
+<li>Fit dev set well on cost function ( regularization, bigger training set )</li>
+<li>Fit test set well on cost function ( big dev set )</li>
+<li>Performs well in real world ( change dev set or cost function )</li>
+</ul>
+<p>Note: Early stop is one knob that is less orthogonalized, simultaneously affect performance on training set and dev set.</p>
+</li>
+</ol>
+<h3 id="2-Setting-Up-your-Goal"><a href="#2-Setting-Up-your-Goal" class="headerlink" title="2. Setting Up your Goal"></a>2. Setting Up your Goal</h3><ol>
+<li><p>Single Number Evaluation Metric</p>
+<ul>
+<li>precision P</li>
+<li>recall R</li>
+<li>$F_1\ {\rm score} &#x3D; \frac{2}{\frac{1}{P}+\frac{1}{R}}$, harmonic mean of P and R</li>
+<li>average error</li>
+</ul>
+</li>
+<li><p>Satisficing and Optimizing Metric</p>
+<ul>
+<li>e.g. maximize accuracy subject to running time &lt;&#x3D; 100 ms</li>
+<li>N metrics: 1 to be optimizing, N-1 to be satisficing ( reach threshold )</li>
+</ul>
+</li>
+<li><p>Train&#x2F;Dev&#x2F;Test Distribution</p>
+<ul>
+<li>Randomly shuffle into dev&#x2F;test set (same distribution)</li>
+<li>Choose a dev set and test set to reflect data you expect to get in the future and consider important to do well on</li>
+</ul>
+</li>
+<li><p>Size of the Dev and Test Sets</p>
+<ul>
+<li>Old way ML with 100 ~ 10,000 data<ul>
+<li>70% train + 30% test (dev)</li>
+<li>60% train + 20% dev + 20% test</li>
+</ul>
+</li>
+<li>DL with 1,000,000 data - 98% train + 1% dev + 1% test</li>
+</ul>
+</li>
+<li><p>When to Change Dev&#x2F;Test Sets and Metrics?</p>
+<ul>
+<li>Orthogonalization for ML problems<ul>
+<li>Define an evaluation metric ( “place the target”: if it cannot satisfy your need, change it )</li>
+<li>Do well on the metric ( “aim&#x2F;shoot at target” )</li>
+</ul>
+</li>
+<li>If doing well on your metric + dev&#x2F;test set does not correspond to doing well on your application, change your metric + dev&#x2F;test set.</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-Comparing-to-Human-level-performance"><a href="#3-Comparing-to-Human-level-performance" class="headerlink" title="3. Comparing to Human-level performance"></a>3. Comparing to Human-level performance</h3><ol>
+<li><p>Why Human-level Performance?</p>
+<ul>
+<li>human-level performance &#x2F; Bayes optimal error</li>
+<li>When ML is worse than humans, you can:<ul>
+<li>Get labeled data from humans</li>
+<li>Gain insight from manual error analysis</li>
+<li>Better analysis of bias&#x2F;variance</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Avoidable Bias</p>
+<ul>
+<li>For computer vision task, Human-level error as a proxy for Bayes error</li>
+<li>Avoidable Bias &#x3D; training error - Bayes error</li>
+</ul>
+</li>
+<li><p>Understanding Human-level</p>
+<ul>
+<li>Human-level error (as a proxy for Bayes error) &amp; training error - “avoidable bias”</li>
+<li>training error &amp; dev error - “variance”</li>
+</ul>
+</li>
+<li><p>Surpassing Human-level Performance</p>
+<ul>
+<li>Structured data<ul>
+<li>Online advertising</li>
+<li>Product recommendations</li>
+<li>Logistics</li>
+<li>Loan approvals</li>
+</ul>
+</li>
+<li>Natural perception ( harder )<ul>
+<li>Speech recognition</li>
+<li>Image recognition</li>
+<li>Medical</li>
+</ul>
+</li>
+<li>Lots of data</li>
+</ul>
+</li>
+<li><p>Improving your Model Performance</p>
+<ul>
+<li>You can fit the training set pretty well. ~ Avoidable bias<ul>
+<li>train bigger model</li>
+<li>train longer&#x2F;better optimization algorithms</li>
+<li>NN architecture&#x2F;hyperparameters search</li>
+</ul>
+</li>
+<li>The training set performance generalize pretty well to the dev&#x2F;test det. ~ Variance<ul>
+<li>More data</li>
+<li>Regularization</li>
+<li>NN architecture&#x2F;hyperparameters search</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Week-2-ML-Strategy"><a href="#Week-2-ML-Strategy" class="headerlink" title="Week 2 ML Strategy"></a>Week 2 ML Strategy</h2><h3 id="1-Error-Analysis"><a href="#1-Error-Analysis" class="headerlink" title="1. Error Analysis"></a>1. Error Analysis</h3><ol>
+<li><p>Carrying Out Error Analysis</p>
+<ul>
+<li>Look at dev examples to evaluate ideas</li>
+<li>Evaluate multiple ideas in parallel</li>
+</ul>
+</li>
+<li><p>Cleaning Up Incorrectly Labeled Data</p>
+<ul>
+<li>In training set: DL algorithms are quite robust to random errors</li>
+<li>In dev set:<ul>
+<li>Overall dev set error</li>
+<li>Errors due to incorrect labels</li>
+<li>Errors due to other causes</li>
+</ul>
+</li>
+<li>Correcting incorrect dev&#x2F;test set examples<ul>
+<li>Apply same process to both for same distribution</li>
+<li>Examine examples your algorithm got right as well (not always done)</li>
+<li>Train and dev&#x2F;test data may come from slightly different distributions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Build your First System Quickly, then Iterate</p>
+<ul>
+<li>Set up dev&#x2F;test set and metric</li>
+<li>Build initial system quickly</li>
+<li>Use Bias&#x2F;Variance analysis &amp; Error analysis to prioritize next steps</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Mismatched-Training-and-Dev-x2F-Test-Set"><a href="#2-Mismatched-Training-and-Dev-x2F-Test-Set" class="headerlink" title="2. Mismatched Training and Dev&#x2F;Test Set"></a>2. Mismatched Training and Dev&#x2F;Test Set</h3><ol>
+<li><p>Training and Testing on Different Distributions</p>
+</li>
+<li><p>Bias and Variance with Mismatched Data Distributions</p>
+<ul>
+<li>Training-dev set: same distribution as training set, but not used for training<br> Human-level error<br> &amp;emsp;&amp;emsp;&amp;emsp;$\updownarrow$ avoidable bias<br> Training error<br> &amp;emsp;&amp;emsp;&amp;emsp;$\updownarrow$ variance<br> Training-dev error<br> &amp;emsp;&amp;emsp;&amp;emsp;$\updownarrow$ data mismatch<br> Dev error<br> &amp;emsp;&amp;emsp;&amp;emsp;$\updownarrow$ degree of overfit to dev set<br> Test error</li>
+<li>More general formulation  <table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">General Dataset</th>
+<th align="center">Specific Dataset</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Human-level</td>
+<td align="center">“Human-level error”</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Error on examples trained on</td>
+<td align="center">“Training error”</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Error on examples not trained on</td>
+<td align="center">“Training-dev error”</td>
+<td align="center">“Dev&#x2F;Test error”</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p>Addressing Data Mismatch</p>
+<ul>
+<li>Carry out manual error analysis to try to understand difference between training and dev&#x2F;test sets</li>
+<li>Making training data more similar; or collect more data similar to dev&#x2F;test sets<ul>
+<li>Artificial data synthesis ( be cautious because it may overfit to a subset for synthesis )</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-Learning-for-Multiple-Tasks"><a href="#3-Learning-for-Multiple-Tasks" class="headerlink" title="3. Learning for Multiple Tasks"></a>3. Learning for Multiple Tasks</h3><ol>
+<li><p>Transfer Learning</p>
+<ul>
+<li>pre-training</li>
+<li>tune tuning</li>
+<li>When transfer learning makes sense: Transfer from A to B<ul>
+<li>Task A and B have the same input x</li>
+<li>You have a lot more data for Task A than Task B</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Multi-task Learning</p>
+<ul>
+<li>Not fully labeled data: cost sum only over loss of labeled data</li>
+<li>When multi-task learning makes sense:<ul>
+<li>Training on a set of tasks that could benefit from having shared lower-level features</li>
+<li>Usually: amount of data you have for each task is quite similar</li>
+<li>Can train a big enough neural network to do well on all the tasks</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-End-to-end-Deep-Learning"><a href="#4-End-to-end-Deep-Learning" class="headerlink" title="4. End-to-end Deep Learning"></a>4. End-to-end Deep Learning</h3><ol>
+<li><p>What is End-to-end Deep Learning</p>
+<ul>
+<li>Compare with pipline</li>
+<li>Needs a lot of data</li>
+<li>Seperate into subproblems to expand datasets (e.g., face recognition)</li>
+</ul>
+</li>
+<li><p>Whether to use End-to-end Deep Learning</p>
+<ul>
+<li>Prons<ul>
+<li>Let the data speak</li>
+<li>Less hand-designing of components needed</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>May need large amount of data</li>
+<li>Excludes potentially useful hand-designed components</li>
+</ul>
+</li>
+<li>Key question: Do you have sufficient data to learn a function of the complexity needed to map x to y?</li>
+</ul>
+</li>
+</ol>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+
+<script src="/croirezoe/croirezoe.github.io/js/jquery.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/croirezoe/croirezoe.github.io/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
